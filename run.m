@@ -19,12 +19,6 @@ if(~exist(MaxResSavePath,'file'))
 end
 
 dataPath = './datasets/';
-% datasetName = {'3sources','Yale','Texas','Cornell','WebKB_cor2views','MSRCV1','Washington','WebKB_Wisconsin2views','Wisconsin','Dermatology','ORLRnSp','ORL_3Views','ORL_4Views','NGs','BBCSport','Movies','BBC','proteinFold','WebKB','HW_2Views','MFeat_2Views','uci-digit','Cora','Wiki_fea','CiteSeer','NUS-WIDE-SCENE','NUS-WIDE-OBJECT-10','Reuters-7200','Hdigit','SUNRGBD','STL10_4Views','Reuters','NUS-WIDE-OBJECT','YouTubeFace10_4Views','CIFAR100_Train_4Views','FashionMNIST_4Views','MNIST_ALL_4Views','TinyImageNet_4Views','YouTubeFace50_4Views'};
-% datasetName = {'Cornell','WebKB_cor2views','MSRCV1','Washington','WebKB_Wisconsin2views','Wisconsin','Dermatology','ORLRnSp','ORL_3Views','ORL_4Views','NGs','BBCSport','Movies','BBC','proteinFold','WebKB','HW_2Views','MFeat_2Views','uci-digit','Cora','Wiki_fea','CiteSeer','NUS-WIDE-SCENE','NUS-WIDE-OBJECT-10','Reuters-7200','Hdigit','SUNRGBD','STL10_4Views','Reuters','NUS-WIDE-OBJECT','YouTubeFace10_4Views','CIFAR100_Train_4Views','FashionMNIST_4Views','MNIST_ALL_4Views','TinyImageNet_4Views','YouTubeFace50_4Views'};
-% datasetName = {'proteinFold','Flower17','WebKB','MFeat_2Views','HW_2Views','MFeat_2Views','uci-digit','BDGP','Caltech101-20','Cora','Wiki_fea','CiteSeer','Hdigit','NUS-WIDE-SCENE','NUS-WIDE-OBJECT-10','Reuters','NUS-WIDE-OBJECT','YouTubeFace10_4Views','CIFAR100_Train_4Views','FashionMNIST_4Views','MNIST_ALL_4Views','YouTubeFace20_4Views'};
-% datasetName = {'Reuters-7200','SUNRGBD','VGGFace2_50_4Views','VGGFace2_100_4Views','YouTubeFace20_4Views'};
-% datasetName = {'ORL_3Views','AwA_fea','Caltech256','VGGFace2_200_4Views','TinyImageNet_4Views'};
-% datasetName = {'Flower17','HW_2Views','MFeat_2Views','BDGP','Hdigit','YouTubeFace10_4Views','AwA_fea','YouTubeFace20_4Views'};
 datasetName = {'MNIST_fea'};
 num_p=3;
 for dataIndex = 1 : length(datasetName)
@@ -78,4 +72,5 @@ for dataIndex = 1 : length(datasetName)
     end
     resFile2 = [MaxResSavePath datasetName{dataIndex}, '-ACC=', num2str(best_acc), '.mat'];
     save(resFile2,'best_acc','best_nmi','best_pur');
+
 end
